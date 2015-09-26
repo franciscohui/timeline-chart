@@ -1,0 +1,13 @@
+body{
+  background-color: silver;
+}
+.event{
+  background-color: white;
+  display: inline-block;
+  line-height: 1.5em;
+  padding: 0 .4em;
+  border-radius: 2px;
+}
+.event:hover{
+  background-color: gray;
+}
