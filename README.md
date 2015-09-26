@@ -2,7 +2,7 @@
 An app to add events to a timeline and resize events via drag events
 
 # Google Search History and references for this first commit to 
-1. Click an event object to get its width
+**1. Click an event object to get its width**
 - https://developers.google.com/speed/libraries/
 - http://api.jquery.com/
 - http://api.jquery.com/category/dimensions/
@@ -10,17 +10,17 @@ An app to add events to a timeline and resize events via drag events
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 - http://api.jquery.com/html/
 
-2. Make event objects draggable
+**2. Make event objects draggable**
 - http://jqueryui.com/draggable/
 - http://api.jqueryui.com/draggable/
 
-3. Get the mouse position
+**3. Get the mouse position**
 - http://stackoverflow.com/questions/11245119/how-to-get-mouse-pointer-position-using-javascript-for-internet-explorer
 - https://www.google.com/search?q=jquery+mouse+position&oq=jquery+mouse+position&aqs=chrome..69i57j69i64.3087j0j1&sourceid=chrome&es_sm=91&ie=UTF-8
 - https://api.jquery.com/mousemove/
 - https://api.jquery.com/category/events/mouse-events/
 
-4. Get the mouse position on mouse down/up, then figure out the distance
+**4. Get the mouse position on mouse down/up, then figure out the distance**
 - https://api.jquery.com/mousemove/
 - https://api.jquery.com/mouseup/
 - http://jsfiddle.net/stulentsev/Em4Xu/26/
