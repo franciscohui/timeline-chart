@@ -7,7 +7,11 @@ body{
   line-height: 1.5em;
   padding: 0 .4em;
   border-radius: 2px;
+  width: 150px;
 }
 .event:hover{
+  background-color: yellow;
+}
+.event:active{
   background-color: gray;
 }
