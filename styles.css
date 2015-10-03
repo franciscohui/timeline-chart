@@ -1,5 +1,18 @@
+/*
+t1: #283848
+t2: #53606D
+t3: #7E8892
+t4: #A9B0B6
+t5: #D4D8DB
+*/
+
 body{
-  background-color: silver;
+  background-color: #283848;
+  font-family: sans-serif;
+  margin: 0;
+}
+body:active, .event:active, .event:hover{
+  cursor: ew-resize;
 }
 .event{
   background-color: white;
@@ -10,8 +23,19 @@ body{
   width: 150px;
 }
 .event:hover{
-  background-color: yellow;
+  background-color: #A9B0B6;
 }
 .event:active{
-  background-color: gray;
+  background-color: #53606D;
+}
+#mouse-position{
+  position: fixed;
+  color: #D4D8DB;
+}
+.resizable{
+  resize: both;
+  display: inline-block;
+  height: 1.5em;
+  width: 150px;
+  background-color: #A9B0B6;
 }

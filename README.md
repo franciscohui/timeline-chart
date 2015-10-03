@@ -29,3 +29,14 @@ An app to add events to a timeline and resize events via drag events
 - http://answers.unity3d.com/questions/140530/getting-the-distancex-ive-moved-the-mouse-while-ho.html
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 - https://css-tricks.com/snippets/jquery/get-x-y-mouse-coordinates
+
+**5. Getting and Setting the event object's width**
+- http://stackoverflow.com/questions/294250/how-do-i-retrieve-an-html-elements-actual-width-and-height
+
+**6. Adding event objects to the chart**
+- http://api.jquery.com/category/manipulation/dom-insertion-inside/
+
+**7. Drawing resizable rectangles on a canvas**
+- https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+- https://www.youtube.com/watch?v=N0BNbngr2IY
+- http://jsfiddle.net/4Vfm5/1095/

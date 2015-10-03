@@ -1,59 +1,79 @@
 $(document).ready(function(){
 
-  // define function to get an event's width
+// get event object's width
   function getWidth(element, width){ // pass two parameters, element text and width
     console.log(element + " " + width); // log the results
   } // defining getWidth function
 
-  // define event trigger
+// event trigger
   $(".event").click(function (){ // when .event classes are clicked
     getWidth( //use the getWidth function with these two parameters
       $(this).html() + " is: ", // get the clicked element's html content
       $(this).width()// get the clicked element's width
     ); // calling getWidth method
   }); //.event.click
-    
 
-
-  // get mouse coordinates and display on page; 
+// get mouse coordinates and display on page; 
   $(document).mousemove(function( event ) {
-    var msg = "X: "+ event.pageX + " Y:" + event.pageY;
-    $( "#mouse-position" ).text(msg);
+    var msg = event.pageX + " x " + event.pageY;
+    $( "#mouse-position" ).text(msg).css({"left": event.pageX + 20, "top": event.pageY + -20 });
   });
 
-  // set width of event object
-  function setWidth(distance){
+
+// set width of event object
+  function setWidth(xdistance){
     var currentWidth = $(".event").width();
-    var newWidth = distance;
-    $(".event").width(currentWidth + distance);
+    var newWidth = xdistance;
+    $(".event").width(currentWidth + xdistance);
   }  
 
-  // get distance
+// get drag xdistance
   var x1 = null;
   var x2 = null;
-  var distance;
+  var y1 = null;
+  var y2 = null;
+  var xdistance;
+  var ydistance;
 
   $(document)
     .mousedown(function() {
     x1 = event.pageX;
+    y1 = event.pageY;
     // console.log(x1);
-    // getDistance(event.pageX);
+    // getxdistance(event.pageX);
   })
     .mouseup(function() {
     x2 = event.pageX;
-    distance = x2-x1;
-    console.log(x2 + " - " + x1 + " = "+ distance);
-    setWidth(distance); //call setWidth method with new distance
+    y2 = event.pageY;
+    xdistance = x2-x1;
+    ydistance = y2-y1;
+    console.log(x2 + " - " + x1 + " = "+ xdistance);
+    setWidth(xdistance); //call setWidth method with new xdistance
   });
 
+// set up canvas
+  var canvas = document.getElementById("paper"),
+      c = canvas.getContext("2d");
+      c.canvas.width = window.innerWidth;
+      c.canvas.height = window.innerHeight;
 
-  // // add event
-  // function createEvent(distance){
-  //   $(".timeline").append("<div>New Event</div>");
-  // }
-  // $(document).click(function(){
-  //   createEvent();
-  // });
+// draw a square
+  function drawSquare(startPageX,startPageY, xdistance, ydistance){ 
+    c.fillStyle = "silver";
+    c.fillRect(startPageX, startPageY, xdistance, ydistance);
+  }
+
+  $(document).click(function(e){
+    drawSquare(x1 - 1, y1 -3, xdistance, ydistance);
+  });
+
+// // add event
+//   function createEvent(xdistance){
+//     $(".timeline").append("<div>New Event</div>");
+//   }
+//   $(document).click(function(){
+//     createEvent();
+//   });
 
 
   /*
@@ -67,5 +87,7 @@ $(document).ready(function(){
   get mouse on release, log it
   get difference between two mouse actions
   combine it to event object width
+
+
   */
 });
